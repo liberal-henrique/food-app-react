@@ -46,7 +46,12 @@ export default function Checkout(props) {
       return;
     }
 
-    // Submit the form
+    props.onConfirm({
+      name: enteredName,
+      street: enteredStret,
+      city: enteredCity,
+      postalCode: enteredPostal,
+    })
   };
 
   const nameControlClasses = `${classes.control} ${
